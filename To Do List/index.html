@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>What To-Do</title>
+  <link rel="icon" href="../images/arcadion_images/arcadion_icon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="global-nav-buttons">
+    <a href="../index.html" class="nav-button">⬅ Back</a>
+    <a href="../Counter Game/index.html" class="nav-button">Next ➡</a>
+  </div>
+
+  <div class="container">
+    <header class="title-section">
+      <h1>What To-Do</h1>
+      <div class="top-right">
+        <div class="toggle-mode" id="toggleMode" title="Toggle Dark/Light Mode">🌙</div>
+      </div>
+    </header>
+
+    <main>
+      <section class="todo-section">
+        <form id="todoForm" class="form-input">
+          <input type="text" id="todoInput" placeholder="Create a new task..." />
+          <button type="submit" title="Add task">+</button>
+        </form>
+        <ul id="todoList" class="todo-list"></ul>
+      </section>
+    </main>
+
+    <footer class="summary-section">
+      <div class="total-complete-items">
+        <p>Pending: <span id="taskCount">0</span></p>
+        <p>Completed: <span id="completedCount">0</span></p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

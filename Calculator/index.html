@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arcade Calculator</title>
+  <link rel="icon" href="../images/arcadion_images/arcadion_icon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="dark">
+  <div class="gradient-bg"></div>
+
+  <div class="calculator">
+    <div class="global-nav-buttons">
+      <a href="../Counter Game/index.html" class="nav-button">⬅ Back</a>
+      <a href="../Random Color Generator/index.html" class="nav-button">Next ➡</a>
+    </div>
+
+    <div class="header">
+      <h1>🎮 ArcadeCalc</h1>
+      <button id="themeToggle" title="Toggle Theme">🌓</button>
+    </div>
+
+    <div class="screen" id="screen">0</div>
+    <div class="combo" id="comboDisplay">Combo x1</div>
+
+    <div class="keypad">
+      <button class="key">7</button>
+      <button class="key">8</button>
+      <button class="key">9</button>
+      <button class="action" id="del">DEL</button>
+
+      <button class="key">4</button>
+      <button class="key">5</button>
+      <button class="key">6</button>
+      <button class="operator">+</button>
+
+      <button class="key">1</button>
+      <button class="key">2</button>
+      <button class="key">3</button>
+      <button class="operator">-</button>
+
+      <button class="key">.</button>
+      <button class="key">0</button>
+      <button class="operator">/</button>
+      <button class="operator">x</button>
+
+      <button class="action span-two" id="reset">RESET</button>
+      <button class="equals span-two" id="equals">BLAST</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess My Number</title>
+  <link rel="icon" href="../images/arcadion_images/arcadion_icon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <div class="global-nav-buttons">
+    <a href="../Random Color Generator/index.html" class="nav-button">⬅ Back</a>
+    <a href="../Tic Tac Toe/index.html" class="nav-button">Next ➡</a>
+  </div>
+
+  <div class="container">
+    <header>
+      <h1>🎮 GUESS MY NUMBER</h1>
+      <p class="range">Pick a number between <strong>1</strong> and <strong>20</strong></p>
+    </header>
+
+    <main class="game-box">
+      <section class="left-panel">
+        <input type="number" class="input-number" placeholder="Your Guess" min="1" max="20" />
+        <button class="btn check">✔️ Check</button>
+      </section>
+
+      <section class="right-panel">
+        <div class="secret">?</div>
+        <p class="feedback">Enter a number to start...</p>
+        <p class="score">Score: <span id="score">10</span></p>
+        <p class="highscore">Highscore: <span id="highscore">0</span></p>
+      </section>
+    </main>
+
+    <button class="btn restart">🔁 Play Again</button>
+  </div>
+
+  <!-- Sounds -->
+  <audio id="sound-win" src="sounds/win.mp3"></audio>
+  <audio id="sound-wrong" src="sounds/wrong.mp3"></audio>
+  <audio id="sound-restart" src="sounds/restart.mp3"></audio>
+  <audio id="sound-invalid" src="sounds/invalid.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

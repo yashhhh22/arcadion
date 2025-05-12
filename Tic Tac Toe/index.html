@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic Tac Toe</title>
+   
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="global-nav-buttons">
+    <a href="../Guess My Number/index.html" class="nav-button">⬅ Back</a>
+    <a href="../Feedback/qr.html" class="nav-button">Next ➡</a>
+  </div>
+
+  <div class="container">
+    <h1>Tic Tac Toe</h1>
+
+    <div class="game-area">
+      <div class="left-side">
+        <div class="speech-bubble" id="speech">It's your turn, Player X</div>
+        <img src="friends.png" alt="Astronaut Friends" class="astronauts" id="astroImg" />
+      </div>
+
+      <div class="board" id="board"></div>
+    </div>
+
+    <button id="resetBtn">🔁 Restart Game</button>
+  </div>
+
+  <!-- Audio -->
+  <audio id="moveSound" src="audio/move.mp3" preload="auto"></audio>
+  <audio id="winSound" src="audio/win.mp3" preload="auto"></audio>
+  <audio id="drawSound" src="audio/draw.mp3" preload="auto"></audio>
+  <audio id="resetSound" src="audio/reset.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

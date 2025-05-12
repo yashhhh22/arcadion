@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --bg-dark: #1c1b2f;
+  --bg-light: #f8f9fa;
+  --text-dark: #f1f1f1;
+  --text-light: #222;
+  --neon: #00ffc3;
+  --pink: #ff2f9e;
+  --yellow: #f8ff45;
+  --action: #e91e63;
+}
+
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  transition: background-color 0.4s ease;
+  color: var(--text-dark);
+  background-color: var(--bg-dark);
+  position: relative;
+}
+
+body.light {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+.gradient-bg {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(135deg, #00ffc3, #ff2f9e, #f8ff45, #00ffc3);
+  background-size: 400% 400%;
+  animation: gradientShift 20s infinite;
+  z-index: -1;
+  filter: blur(80px);
+  opacity: 0.6;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.calculator {
+  width: 90%;
+  max-width: 450px;
+  background: rgba(0,0,0,0.4);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 25px var(--neon);
+  z-index: 10;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#themeToggle {
+  background: transparent;
+  border: 2px solid var(--neon);
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 0.4rem;
+  cursor: pointer;
+  color: var(--neon);
+  transition: 0.2s;
+}
+
+#themeToggle:hover {
+  background: var(--neon);
+  color: #000;
+}
+
+.screen {
+  background: #000;
+  color: var(--neon);
+  font-size: 2rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px var(--neon);
+  min-height: 60px;
+}
+
+.combo {
+  color: var(--yellow);
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.7rem;
+}
+
+button {
+  font-size: 1rem;
+  padding: 1rem;
+  background: #222;
+  color: var(--text-dark);
+  border: 2px solid var(--neon);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.05s ease-out, background 0.15s ease;
+  box-shadow: 0 4px 0 #000;
+}
+
+button:hover {
+  background: var(--neon);
+  color: #000;
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: scale(0.96);
+  box-shadow: none;
+}
+
+.operator {
+  color: var(--pink);
+}
+
+.action {
+  background: var(--action);
+  color: white;
+}
+
+.equals {
+  background: var(--pink);
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+@media (max-width: 500px) {
+  .screen {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .combo {
+    font-size: 0.7rem;
+  }
+}
+
+.global-nav-buttons {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  gap: 12px;
+}
+
+/* Neon-styled buttons for arcade calculator */
+.nav-button {
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  background: #000;
+  color: var(--neon);
+  border: 2px solid var(--neon);
+  box-shadow: 0 0 12px var(--neon);
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.nav-button:hover {
+  background: var(--neon);
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* Light mode compatibility */
+body.light .nav-button {
+  background: #fff;
+  color: var(--pink);
+  border-color: var(--pink);
+  box-shadow: 0 0 10px var(--pink);
+}
+
+body.light .nav-button:hover {
+  background: var(--pink);
+  color: #fff;
+}
+

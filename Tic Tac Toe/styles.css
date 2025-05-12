@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #89f7fe, #66a6ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.container {
+  background: #ffffffcc;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #003366;
+}
+
+.game-area {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.speech-bubble {
+  background: #003366;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  animation: float 2s ease-in-out infinite;
+  display: inline-block;
+  text-align: center;
+  max-width: 200px;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.astronauts {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-height: 320px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  border: 3px solid #003366;
+  border-radius: 10px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #003366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cell:hover {
+  background-color: #e6f0ff;
+}
+
+.cell.win {
+  background-color: #4caf5044;
+}
+
+#resetBtn {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background: #003366;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#resetBtn:hover {
+  background: #005599;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .game-area {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .board {
+    grid-template-columns: repeat(3, 80px);
+  }
+
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+
+  .astronauts {
+    max-height: 240px;
+  }
+
+  .speech-bubble {
+    font-size: 1rem;
+  }
+}
+
+.global-nav-buttons {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 12px;
+  z-index: 1000;
+}
+
+.nav-button {
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background-color: #003366;
+  color: #ffffff;
+  border: 2px solid white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-button:hover {
+  background-color: #ffffff;
+  color: #003366;
+  border-color: #003366;
+}
+
+/* Optional support for future light mode */
+body.light-mode .nav-button {
+  background-color: #ffffffdd;
+  color: #003366;
+  border-color: #003366;
+}
+
+body.light-mode .nav-button:hover {
+  background-color: #003366;
+  color: #ffffff;
+}

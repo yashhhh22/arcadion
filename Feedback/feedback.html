@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ARCADION Feedback</title>
+  <link rel="icon" href="../images/arcadion_images/arcadion_icon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <main class="feedback-container" id="form-section">
+    <div class="arcade-header">💬 PLAYER FEEDBACK</div>
+    <form id="feedbackForm">
+      
+      <div class="question">1. How would you rate the visual appeal of the ARCADION project?</div>
+      <div class="radio-group" data-question="q1">
+        <label class="radio-btn"><input type="radio" name="q1" required> Excellent</label>
+        <label class="radio-btn"><input type="radio" name="q1"> Good</label>
+        <label class="radio-btn"><input type="radio" name="q1"> Average</label>
+        <label class="radio-btn"><input type="radio" name="q1"> Needs Improvement</label>
+      </div>
+
+      <div class="question">2. Was the navigation smooth and intuitive?</div>
+      <div class="radio-group" data-question="q2">
+        <label class="radio-btn"><input type="radio" name="q2" required> Yes</label>
+        <label class="radio-btn"><input type="radio" name="q2"> Somewhat</label>
+        <label class="radio-btn"><input type="radio" name="q2"> No</label>
+      </div>
+
+      <div class="question">3. Did the gaming theme feel consistent throughout?</div>
+      <div class="radio-group" data-question="q3">
+        <label class="radio-btn"><input type="radio" name="q3" required> Yes</label>
+        <label class="radio-btn"><input type="radio" name="q3"> Partially</label>
+        <label class="radio-btn"><input type="radio" name="q3"> No</label>
+      </div>
+
+      <div class="question">4. Which section was most impressive?</div>
+      <input type="text" name="q4" placeholder="Type your answer..." required>
+
+      <div class="question">5. Did all six projects work correctly?</div>
+      <div class="radio-group" data-question="q5">
+        <label class="radio-btn"><input type="radio" name="q5" required> Yes</label>
+        <label class="radio-btn"><input type="radio" name="q5"> Some issues</label>
+        <label class="radio-btn"><input type="radio" name="q5"> No</label>
+      </div>
+
+      <div class="question">6. How responsive was the website?</div>
+      <div class="radio-group" data-question="q6">
+        <label class="radio-btn"><input type="radio" name="q6" required> Very responsive</label>
+        <label class="radio-btn"><input type="radio" name="q6"> Mostly responsive</label>
+        <label class="radio-btn"><input type="radio" name="q6"> Somewhat responsive</label>
+        <label class="radio-btn"><input type="radio" name="q6"> Not responsive</label>
+      </div>
+
+      <div class="question">7. Did interactive elements add value?</div>
+      <div class="radio-group" data-question="q7">
+        <label class="radio-btn"><input type="radio" name="q7" required> Yes</label>
+        <label class="radio-btn"><input type="radio" name="q7"> Neutral</label>
+        <label class="radio-btn"><input type="radio" name="q7"> No</label>
+      </div>
+
+      <div class="question">8. Was teammate information clear?</div>
+      <div class="radio-group" data-question="q8">
+        <label class="radio-btn"><input type="radio" name="q8" required> Yes</label>
+        <label class="radio-btn"><input type="radio" name="q8"> Could be improved</label>
+        <label class="radio-btn"><input type="radio" name="q8"> No</label>
+      </div>
+
+      <div class="question">9. On a scale of 1 to 10, how likely are you to recommend this project?</div>
+      <input type="number" name="q9" min="1" max="10" required>
+
+      <div class="question">10. Suggestions for future improvements:</div>
+      <textarea name="q10" placeholder="Your suggestions..." rows="3" required></textarea>
+
+      <div class="btn-group">
+        <button type="submit">🎮 Submit Feedback</button>
+      </div>
+    </form>
+  </main>
+
+  <div class="thank-you hidden" id="thankYouScreen">
+    <h1>🎉 THANK YOU!</h1>
+    <p>Your feedback has powered up ARCADION!</p>
+    
+    <div class="team-image-wrapper">
+      <img src="../images/team_members_images/team_arcadion_ghibli.png" alt="Team Arcadion Ghibli Art">
+    </div>
+
+    <p class="final-line">We truly appreciate you taking the time to explore and review our project 💖</p>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
