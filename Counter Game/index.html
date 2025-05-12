@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Counter Game</title>
+  <link rel="icon" href="../images/arcadion_images/arcadion_icon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="global-nav-buttons">
+    <a href="../To Do List/index.html" class="nav-button">⬅ Back</a>
+    <a href="../Calculator/index.html" class="nav-button">Next ➡</a>
+  </div>
+
+  <header>
+    <h1>Counter Game</h1>
+    <button id="theme-toggle" title="Toggle Theme">🌙</button>
+  </header>
+
+  <main>
+    <div class="counter-box">
+      <div id="value" class="animate">0</div>
+      <div class="button-container">
+        <button class="btn decrease">➖ Decrease</button>
+        <button class="btn reset">🔄 Reset</button>
+        <button class="btn increase">➕ Increase</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Sound Effects -->
+  <audio id="increase-sound" src="sounds/increase.mp3"></audio>
+  <audio id="decrease-sound" src="sounds/decrease.mp3"></audio>
+  <audio id="reset-sound" src="sounds/reset.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
